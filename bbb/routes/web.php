@@ -55,6 +55,7 @@ $app->get('404', function (){
 
 
 
+
 $app->get('ctl', 'UserController@store');
 
 
@@ -70,7 +71,11 @@ $app->get('db/insert', 'dbConnController@insert');
 $app->get('db/update', 'dbConnController@update');
 
 
+$app->get('db/select_json', 'dbConnController@select_json');
 
+$app->get('db/update_json', 'dbConnController@update_json');
+
+$app->get('view', 'viewController@view');
 
 
 
