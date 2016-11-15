@@ -10,9 +10,9 @@ class dbConnController extends Controller
     public function select()
     {
 
-//	$users = DB::table('cc')->get();
+	$users = DB::table('cc')->get();
 	echo "dfsdfsdf";
-	//echo $user->name;
+	//return $user->name;
 
     }
 }
