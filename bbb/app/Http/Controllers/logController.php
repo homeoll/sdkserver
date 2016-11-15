@@ -6,7 +6,7 @@ use Log;
 use App\User;
 use App\Http\Controllers\Controller;
 
-class dbController extends Controller {
+class logController extends Controller {
 
     /**
      * Show the user for the given ID.
@@ -14,12 +14,10 @@ class dbController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function errorlog() {
-
-        //return "errorlog";
-        $id = "xxx";
+    public function show($id) {
+        
         Log::info('Showing user: ' . $id);
-
+        return $id;
         //return User::findOrFail($id);
     }
 
