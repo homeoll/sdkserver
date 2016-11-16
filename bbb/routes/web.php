@@ -77,6 +77,11 @@ $app->get('db/update_json', 'dbConnController@update_json');
 
 $app->get('view', 'viewController@view');
 
+//$app->get('middle', 'reMiddleware@handle');
+
+$app->get('middle', ['middleware' => ['reMiddleware', 'ttMiddleware'], function () {
+    return 'middleware';
+}]);
 
 
 
