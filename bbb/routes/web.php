@@ -77,7 +77,13 @@ $app->get('db/update_json', 'dbConnController@update_json');
 
 $app->get('view', 'viewController@view');
 
-//$app->get('middle', 'reMiddleware@handle');
+$app->get('view_full', 'viewController@view_full');
+
+
+$app->get('crypt', 'cryptController@crypt');
+$app->get('decrypt', 'cryptController@decrypt');
+
+
 
 $app->get('middle', ['middleware' => ['reMiddleware', 'ttMiddleware'], function () {
     return 'middleware';
